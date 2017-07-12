@@ -146,6 +146,7 @@ p.copyright {
     color: red;
 }
 
-.navbar-brand{
+.col-lg-12{
+    margin-top: 80%;
     
 }
