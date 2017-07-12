@@ -45,8 +45,8 @@ h6 {
 
 .intro-message {
     position: relative;
-    top:450px;
-    padding-bottom: 20%;
+    top:400px;
+    padding-bottom: 30%;
 }
 
 .intro-message > h1 {
@@ -67,7 +67,7 @@ h6 {
 
 @media(max-width:767px) {
     .intro-message {
-        padding-bottom: 15%;
+        padding-bottom: 40%;
     }
 
     .intro-message > h1 {
