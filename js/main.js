@@ -1,12 +1,19 @@
 /****Main****/
 var body = document.querySelector("body");
+var img3 = document.querySelector(".img3");
+var fotos = document.querySelectorAll(".fotos");
 
-if(widthPlataforma()>800){
+
+if(objWidth(body)>800){
     body.setAttribute("style","margin: auto; width: 80%;");
     
-    document.querySelector(".img3-paragrafo").setAttribute("style",String("width: "+img3Width()+"px;"));
+    document.querySelector(".img3-paragrafo").setAttribute("style",String("width: "+objWidth(img3)+"px;"));
     
     document.querySelector(".banner").innerHTML = "<img class='img-responsive' src='img/final.jpg' alt='' style='margin-left:auto;margin-right:auto;'>"
+    
+    fotos.forEach(function(elemento, pos , array){
+        elemento.setAttribute("style",String("margin-top: 20%;"));
+    });
     
     
 }else{
@@ -16,10 +23,6 @@ if(widthPlataforma()>800){
 
 
 /****Functions****/
-function widthPlataforma(){
-        return Number(body.clientWidth);
-}
-
-function img3Width(){
-    return document.querySelector(".img3").clientWidth;
+function objWidth(obj){
+    return obj.clientWidth;
 }
