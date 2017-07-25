@@ -145,6 +145,34 @@ p.copyright {
 .glyphicon-heart{
     color: red;
 }
+
+audio{
+    position: fixed; 
+    width: 95%;
+    bottom:0;
+    left: 0;
+    
+}
+
+.button-next{
+    position: fixed;
+    width: 5%;
+    height: 2.3em;
+    bottom: 0;
+    right: 0;
+    
+    background-color: #f8f8f8;
+}
+
+.glyphicon-step-forward{
+    margin-left: 8%;
+    margin-top: 40%;
+    
+    color: #211d1d;
+    
+}
+
+
 /*
 .col-lg-12{
     margin-top: 80%;

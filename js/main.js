@@ -1,7 +1,12 @@
 /****Main****/
+
 var body = document.querySelector("body");
+var source = document.querySelector(".sourceDom");
+var listaMusicas = ["sons/paula_fernandes.mp3","sons/Vanessa%20da%20Mata%20-%20Amado.mp3"];
+var faixaCont = 1;
 
 
+/****Desenvolvimento****/
 
 if(objWidth(body)>800){
     //***instancias
@@ -34,6 +39,28 @@ if(objWidth(body)>800){
 
 
 /****Functions****/
+
 function objWidth(obj){
     return obj.clientWidth;
 }
+
+
+function nextList(){
+    addCont();
+    source.setAttribute("src",listaMusicas[faixaCont-1]);
+    
+    
+}
+
+
+function addCont(){
+    
+    if(faixaCont != listaMusicas.length){
+        faixaCont++;
+    }else{
+        faixaCont = 1;
+    }
+    
+}
+
+
