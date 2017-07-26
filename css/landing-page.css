@@ -157,7 +157,7 @@ audio{
 .button-next{
     position: fixed;
     width: 5%;
-    height: 2.3em;
+    height: auto;
     bottom: 0;
     right: 0;
     
