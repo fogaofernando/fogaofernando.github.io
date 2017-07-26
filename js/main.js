@@ -1,8 +1,8 @@
 /****Main****/
 
 var body = document.querySelector("body");
-var source = document.querySelector(".sourceDom");
-var listaMusicas = ["sons/paula_fernandes.mp3","sons/Vanessa%20da%20Mata%20-%20Amado.mp3"];
+var controleAudio = document.querySelector(".sourceDom");
+var listaMusicas = ["sons/paula_fernandes.mp3","sons/Vanessa%20da%20Mata%20-%20Amado.mp3","sons/Ana Vilela - Trem Bala.mp3","sons/De Janeiro a Janeiro.mp3","sons/Paula Fernandes - Passaro de Fogo.mp3"];
 var faixaCont = 1;
 
 
@@ -47,9 +47,23 @@ function objWidth(obj){
 
 function nextList(){
     addCont();
-    source.setAttribute("src",listaMusicas[faixaCont-1]);
+    
+    controleAudio.removeChild(document.querySelector(".audioPlayer"));
+    
+    controleAudio.innerHTML = 
+    `<audio class="audioPlayer" controls autoplay>
+        <source src="${listaMusicas[faixaCont-1]}" type="audio/mp3">
+        Seu navegador não suporta o elemento áudio.
+    </audio>
+    <div class="button-next" onclick="nextList()">
+            <a class="glyphicon glyphicon-step-forward"></a>
+    </div>`;
     
     
+    
+    //source.setAttribute("src",listaMusicas[faixaCont-1]);
+    
+   
 }
 
 
